@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 98%);
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-primary: hsl(0, 0%, 100%);
+  --clr-secondary: hsl(235, 19%, 35%);
+  --clr-font: hsl(235, 19%, 35%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsl(0, 0%, 0%);
+    --clr-primary: hsl(235, 24%, 19%);
+    --clr-font: hsl(236, 33%, 92%);
+    --clr-border: hsla(235, 32%, 92%, 0.3);
+  }
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--background);
+    color: var(--clr-font);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body.lightmode {
+  --background: hsl(0, 0%, 98%);
+  --background-footer: hsl(0, 0%, 0%);
+  --clr-primary: hsl(0, 0%, 100%);
+  --clr-font: hsl(235, 19%, 35%);
+  --clr-border: hsla(235, 32%, 92%);
+}
+
+body.darkmode {
+    --background: hsl(0, 0%, 0%);
+    --background-footer: hsl(0, 0%, 50%);
+  --clr-primary: hsl(235, 24%, 19%);
+  --clr-font: hsl(236, 33%, 92%);
+  --clr-border: hsla(235, 32%, 92%, 0.3);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+
+/* ====header==== */
+header {
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.dark-light-toggle {
+    background-color: var(--clr-font);
+    color: var(--background);
+    border-width: 0;
+    outline: 0;
+    border-radius: 24px;
+    padding: .8rem 1.2rem;
+    box-sizing: border-box;
+}
+
+.dark-light-toggle:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+h1 {
+    text-align: center;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+.profile-pic {
+    display: block;
+    margin-inline: auto;
+}
+
+
+/* =====main==== */
+main {
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+li {
+    line-height: 1.2rem;
+    padding-bottom: .8rem;
+}
+
+a {
+    color: var(--clr-font);
+}
+
+/* =====footer=== */
+footer {
+    background-color: var(--background-footer);
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--clr-light);
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

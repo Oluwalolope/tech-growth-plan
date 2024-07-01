@@ -5,10 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- script -->
+    <script defer src="./scripts/toggle.js"></script>
+    <script defer src="./scripts/time.js"></script>
+
     <title>My Tech Career Plan</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <p class="logo">Lope</p>
+            <button class="dark-light-toggle">
+                dark
+            </button>
+        </nav>
+        
+        <h1 data-testid="slackDisplayName">Oluwalolope Adeleye</h1>
+        <img data-testid="slackProfilePicture" src="./assets/images/profile-pic.png" alt="Profile Picture" class="profile-pic">
+    </header>
+
+    <main>
+        <h2>My Goals for the Next 2 Years</h2>
+        <ol>
+            <li>
+                <strong>Launch a Product</strong>: 
+                I plan to develop and launch a tech product, applying my skills to create something valuable and impactful.
+            </li>
+            
+            <li>
+                <strong>Advance My Career</strong>: 
+                I aim to gain experience and grow into a mid-level developer role, mastering both front-end and back-end technologies.
+            </li>
+
+            <li>
+                <strong>Teach and Mentor</strong>: 
+                With a passion for teaching and mentoring, I see myself sharing my knowledge and helping others grow.
+            </li>
+        </ol>
+
+        <div>
+            <p data-testid="currentTimeUTC">
+                <strong>Current UTC Time: </strong>
+                <span id="utc-time"></span>
+            </p>
+
+            <p data-testid="currentDay">
+                <strong>Current Day: </strong>
+                <span id="day-of-week"></span>
+            </p>
+            <p>Slack Email: 
+                <a href="mailto:lopeadeleye@gmail.com" data-testid="slackEmail">lopeadeleye@gmail.com</a>
+            </p>
+            <a href="http://www.linkedin.com/in/oluwalolopeadeleye" target="_blank" rel="noopener noreferrer">Linkedin</a>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://hng.tech/learn" data-testid="hngLink">HNG</a>
+        <a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a>
+        <a href="https://scrapeanyweb.site" data-testid="scrapeanyweblink">Scrape Any Web</a>
+    </footer>
 </body>
 </html>
